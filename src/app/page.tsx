@@ -9,8 +9,8 @@ export default function Home() {
           <Image
             alt="cpq"
             src="/cpq_prepare.png"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
           />
         </div>
         <Image
