@@ -5,6 +5,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <div>
+          <Image
+            alt="cpq"
+            src="/cpq_prepare.png"
+            width={500}
+            height={500}
+          />
+        </div>
         <Image
           className={styles.logo}
           src="/next.svg"
