@@ -1,1 +1,12 @@
+.subheading {
+    font-size: 2vw;
+    margin-top: 10vh;
+}
+.subheading::before {
+    content: "◆  ";
+}
 
+.content {
+    font-size: 1vw;
+    margin-top: 10vh;
+}

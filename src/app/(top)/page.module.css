@@ -64,6 +64,7 @@
 }
 
 .backBlackPanel{
+    color: white;
     background-color: black;
     width: 100vw;
     height: 100vh;
@@ -76,9 +77,13 @@
 }
 .heading {
     color: white;
-    font-size: 5vw
+    font-size: 4vw
 }
 .detail {
     color: white;
-    font-size: 2vw;
+    font-size: 1.5vw;
+}
+
+.panelChildrenContainer {
+    margin: 3vh 200px 10vh 80px;
 }
