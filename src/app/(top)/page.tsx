@@ -7,7 +7,6 @@ import aboutStyles from "./about.module.css";
 
 import { Zen_Maru_Gothic } from "next/font/google";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import FloatIn from "../components/ScrollReveal/FloatIn";
 import { Panel } from "./_components/Panel";
 import { RightBar } from "./_components/RightBar";
