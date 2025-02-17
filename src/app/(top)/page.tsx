@@ -6,91 +6,17 @@ import topStyles from "./top.module.css";
 import aboutStyles from "./about.module.css";
 
 import { Zen_Maru_Gothic } from "next/font/google";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import FloatIn from "../components/ScrollReveal/FloatIn";
+import { Panel } from "./_components/Panel";
+import { RightBar } from "./_components/RightBar";
+import { Genres } from "./_components/exhibition/Genres";
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: "300",
   subsets: ["latin"]
 });
-
-function Panel(params: { children?: ReactNode, id: string, heading: string, detail: string, color: string }) {
-  return (
-    <div className={styles.backBlackPanel} id={params.id}>
-      <div className={styles.headingAndDetail}>
-        <span className={styles.heading}>
-          <span style={{ color: params.color }}>&apos;</span>
-          {params.heading}
-        </span>
-        <span className={styles.detail}>
-          <span style={{ color: params.color }}>　|　</span>
-          {params.detail}
-        </span>
-      </div>
-      <div className={styles.panelChildrenContainer}>
-        {params.children}
-      </div>
-    </div>
-  );
-}
-
-function RightBar(params: { isVisible: boolean }) {
-  const [headingIndex, setHeadingIndex] = useState(0);
-  const colors = ["white", "cyan", "lime", "red", "yellow", "blue", "orange", "aquamarine"];
-
-  const updateHeadingIndex = () => {
-    setHeadingIndex(Math.floor((window.scrollY + window.innerHeight / 4) / window.innerHeight));
-  }
-
-  useEffect(() => {
-    updateHeadingIndex();
-    window.addEventListener("scroll", updateHeadingIndex);
-    return () => window.removeEventListener("scroll", updateHeadingIndex);
-  }, []);
-
-  function Heading(params: { id: string, text: string, color: string, text2?: string, color2?: string, index: number }) {
-
-    return (<>
-      <Link href={`#${params.id}`} scroll>
-        <div
-          className={styles.rightBarHeading}
-          style={{
-            color: headingIndex === params.index ? params.color : "white"
-          }}
-        >
-          {params.text}
-        </div>
-      </Link>
-    </>)
-  }
-
-  return (
-    <div className={`${styles.rightBar} ${params.isVisible ? styles.visible : ""}`}>
-      <div >
-        <Image
-          alt="cpq"
-          src="/cpq_prepare.png"
-          width={200}
-          height={200}
-          className={styles.rightBarImage}
-        />
-      </div>
-      <div className={styles.rightBarHeadingContainer}>
-        <div
-          className={styles.rightBarBlock}
-          style={{ backgroundColor: colors[headingIndex] }}
-        />
-        <Heading id="about" text="ABOUT" color="cyan" index={1} />
-        <Heading id="exhibition" text="EXHIBITION" color="lime" index={2} />
-        <Heading id="date_place" text="DATE" color="red" text2="PLACE" color2="magenta" index={3} />
-        <Heading id="members" text="MEMBERS" color="yellow" index={4} />
-        <Heading id="sponsor" text="SPONSOR" color="blue" index={5} />
-        <Heading id="join" text="JOIN" color="orange" index={6} />
-        <Heading id="contact" text="CONTACT" color="aquamarine" index={7} />
-      </div>
-    </div>
-  );
-}
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -112,7 +38,7 @@ export default function Home() {
     <div>
       <div className={styles.leftBar}>
         <div className={styles.leftBarText}>
-          CREATORS PARADE KYUSHU
+          | CREATORS PARADE KYUSHU |
         </div>
       </div>
       <RightBar isVisible={isVisible} />
@@ -142,20 +68,29 @@ export default function Home() {
         color="cyan"
       >
         <div style={{padding: "3vh 3vw"}}>
-          <div className={aboutStyles.subheading} style={{ marginTop: 0 }}>
-            クリエイターズパレード九州とは
-          </div>
+          <FloatIn move="bottom">
+            <div className={aboutStyles.subheading} style={{ marginTop: 0 }}>
+              クリエイターズパレード九州とは
+            </div>
+
+          </FloatIn>
+          <FloatIn move="bottom">
           <div className={aboutStyles.content} style={{ marginLeft: "6vw" }}>
             「クリエイターズパレード九州」は学生の創作物を学生団体(部活動、サークル等)ごとにブースを設け、各団体が設定したコンセプトに合わせてブースを装飾し作品を展示する企画です。
           </div>
+          </FloatIn>
+          <FloatIn move="bottom">
           <div className={aboutStyles.subheading} style={{ marginLeft: "12vw" }}>
             クリエイターズパレード九州の目的
           </div>
+          </FloatIn>
+          <FloatIn move="bottom">
           <div className={aboutStyles.content} style={{ marginLeft: "18vw" }}>
-            学生の創作作品を一般の方々に向け公開する機会を得る
+            学生の創作作品を一般の方々に向け公開する機会を得る。
             <br />
             企画を通して学校を跨いだ学生団体間の交流を活性化する。
           </div>
+          </FloatIn>
         </div>
       </Panel>
       <Panel
@@ -164,6 +99,7 @@ export default function Home() {
         detail="展示ジャンル"
         color="lime"
       >
+        <Genres />
       </Panel>
       <Panel
         id="date_place"

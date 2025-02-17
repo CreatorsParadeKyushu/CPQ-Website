@@ -1,0 +1,24 @@
+.backBlackPanel{
+    color: white;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.headingAndDetail{
+    display: flex;
+    padding: 50px;
+    align-items: center;
+}
+.heading {
+    color: white;
+    font-size: 4vw
+}
+.detail {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.panelChildrenContainer {
+    margin: 3vh 200px 10vh 80px;
+}

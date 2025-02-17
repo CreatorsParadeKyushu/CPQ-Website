@@ -1,0 +1,45 @@
+.rightBar {
+    position: fixed;
+    right: 0px;
+    top: 0;
+    height: 100vh;
+    width: 150px;
+    padding: 10px;
+    transition: all;
+    transition-duration: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.rightBar.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+.Image {
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+}
+.Block {
+    width: 30px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+.HeadingContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+.Heading{
+    padding: 5px 10px;
+    transition: all;
+    transition-duration: 0.5s;
+    border-bottom: solid 1px transparent;
+}
+.Heading:hover{
+    border-bottom: solid 1px gray;
+}
