@@ -7,17 +7,21 @@ function GenreFrame({ genre }: {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={styles.frame}
+    <div
+      className={styles.frameOuter}
       style={{ flex: isHovered ? "7 1 0%" : "1 1 0%" }}
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className={styles.frame}
       >
-      <div
-        className={styles.view}
-      >
-      </div>
-      <div className={styles.text}>
-        {genre.toLocaleUpperCase()}
+        <div
+          className={styles.view}
+        >
+        </div>
+        <div className={styles.text}>
+          {genre.toLocaleUpperCase()}
+        </div>
       </div>
     </div>
   );

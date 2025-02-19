@@ -1,7 +1,9 @@
-.frame {
+.frameOuter {
     transform: skewX(-10deg);
+    transition: all 1s ease-in-out;
+}
+.frame {
     border-left: solid 1px lime;
-    transition: all 1s;
     margin: 10px 20px;
     padding-left: 5px;
     display: flex;
