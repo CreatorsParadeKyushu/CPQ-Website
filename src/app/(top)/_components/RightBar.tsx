@@ -28,6 +28,10 @@ function RightBar(params: { isVisible: boolean }) {
             }}
           >
             {params.text}
+            {params.text2 ? <>
+              <span style={{color: "white"}}>&</span>
+              <span style={{color: headingIndex === params.index ? params.color2 : "white"}}>{params.text2}</span>
+            </> : ""}
           </div>
         </Link>
       </>)
@@ -47,7 +51,7 @@ function RightBar(params: { isVisible: boolean }) {
         <div className={rightBarStyles.HeadingContainer}>
           <div
             className={rightBarStyles.Block}
-            style={{ backgroundColor: colors[headingIndex] }}
+            style={headingIndex === 3 ? {background: `linear-gradient(to right, ${colors[headingIndex]}, magenta)`} : { backgroundColor: colors[headingIndex] }}
           />
           <Heading id="about" text="ABOUT" color="cyan" index={1} />
           <Heading id="exhibition" text="EXHIBITION" color="lime" index={2} />
