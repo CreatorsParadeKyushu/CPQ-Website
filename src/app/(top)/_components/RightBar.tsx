@@ -35,7 +35,7 @@ function RightBar(params: { isVisible: boolean }) {
   
     return (
       <div className={`${rightBarStyles.rightBar} ${params.isVisible ? rightBarStyles.visible : ""}`}>
-        <div >
+        <Link href="#top" >
           <Image
             alt="cpq"
             src="/cpq_prepare.png"
@@ -43,7 +43,7 @@ function RightBar(params: { isVisible: boolean }) {
             height={200}
             className={rightBarStyles.Image}
           />
-        </div>
+        </Link>
         <div className={rightBarStyles.HeadingContainer}>
           <div
             className={rightBarStyles.Block}
