@@ -1,8 +1,10 @@
+import Image from "next/image";
 import styles from "./GenreFrame.module.css"
 import { Genre } from "@/types/Genres";
 
-function GenreFrame({ genre, isHoveredGenre, setIsHoveredGenre }: {
+function GenreFrame({ genre, imgSrc, isHoveredGenre, setIsHoveredGenre }: {
   genre: Genre,
+  imgSrc: string,
   isHoveredGenre: Genre | null
   setIsHoveredGenre: (genre: Genre | null) => void
 }) {
@@ -18,13 +20,14 @@ function GenreFrame({ genre, isHoveredGenre, setIsHoveredGenre }: {
         <div
           className={styles.view}
         >
-          {/* <Image 
+          <div className={styles.genreImageContainer}>
+          <Image 
             alt={`${genre}-image`}
-            src="/cpq_prepare.png" 
-            width={100}
-            height={100}
+            src={imgSrc}
+            fill
             className={styles.genreImage}
-            /> */}
+            />
+        </div>
         </div>
         <div className={styles.text}>
           {genre.toLocaleUpperCase()}

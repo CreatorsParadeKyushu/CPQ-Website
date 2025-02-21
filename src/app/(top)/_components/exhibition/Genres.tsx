@@ -11,6 +11,7 @@ function Genres({isHoveredGenre, setIsHoveredGenre}: {
             <GenreFrame 
                 key={genre}
                 genre={genre}
+                imgSrc={`/cpq_prepare.png`}
                 isHoveredGenre={isHoveredGenre}
                 setIsHoveredGenre={setIsHoveredGenre}
             />
