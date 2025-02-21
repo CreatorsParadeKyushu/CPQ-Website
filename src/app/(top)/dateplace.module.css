@@ -1,0 +1,29 @@
+.date {
+    font-size: 4vh;
+    margin: 10vh 5vw;
+}
+
+.placeHeadingAndDetail {
+    margin-left: 20vw;
+    display: flex;
+    align-items: center;
+}
+
+.placeHeading {
+    color: white;
+    font-size: 6vh;
+}
+
+.placeDetail {
+    color: white;
+    font-size: 2vh;
+}
+
+.placeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.placeText {
+    font-size: 2vh;
+}
