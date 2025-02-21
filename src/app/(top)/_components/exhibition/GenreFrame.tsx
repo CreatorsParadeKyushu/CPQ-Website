@@ -1,12 +1,10 @@
-import { useState } from "react";
 import styles from "./GenreFrame.module.css"
-import Image from "next/image";
 import { Genre } from "@/types/Genres";
 
 function GenreFrame({ genre, isHoveredGenre, setIsHoveredGenre }: {
   genre: Genre,
   isHoveredGenre: Genre | null
-  setIsHoveredGenre: Function
+  setIsHoveredGenre: (genre: Genre | null) => void
 }) {
   return (
     <div

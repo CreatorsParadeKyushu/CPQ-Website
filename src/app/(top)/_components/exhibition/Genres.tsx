@@ -4,7 +4,7 @@ import styles from "./Genres.module.css"
 
 function Genres({isHoveredGenre, setIsHoveredGenre}: {
     isHoveredGenre: Genre | null,
-    setIsHoveredGenre: Function
+    setIsHoveredGenre: (genre: Genre | null) => void
 }) {
     return (<div className={styles.container}>
         {GenresArray.map(genre => (

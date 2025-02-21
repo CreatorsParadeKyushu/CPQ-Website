@@ -1,11 +1,11 @@
-import { CSSProperties, useState } from 'react';
+import { CSSProperties } from 'react';
 import genreHeadingStyles from './GenreHeading.module.css';
 import { Genre } from '@/types/Genres';
 
 function GenreHeading({ genre, isHoveredGenre, setIsHoveredGenre, style }: {
     genre: Genre,
     isHoveredGenre: Genre | null
-    setIsHoveredGenre: Function,
+    setIsHoveredGenre: (genre: Genre | null) => void,
     style?: CSSProperties | undefined
   }) {
     return (
