@@ -1,5 +1,5 @@
 .subheading {
-    font-size: 2vw;
+    font-size: 3.5vh;
     margin-top: 10vh;
 }
 .subheading::before {
@@ -7,6 +7,6 @@
 }
 
 .content {
-    font-size: 1vw;
+    font-size: 2vh;
     margin-top: 10vh;
 }

@@ -3,8 +3,13 @@
     margin: 10vh 5vw;
 }
 
+.placeContainer {
+    padding: 10px 80px 10px 10px;
+}
+
 .placeHeadingAndDetail {
-    margin-left: 20vw;
+    padding: 50px;
+    margin-left: 20%;
     display: flex;
     align-items: center;
 }
@@ -19,11 +24,47 @@
     font-size: 2vh;
 }
 
-.placeContainer {
+.placeNameLinkContainer {
     display: flex;
+    justify-content: right;
     align-items: center;
+    padding: 2vw;
 }
 
 .placeText {
+    font-size: 3vh;
+    margin: 10vh;
+}
+
+.placeLink {
     font-size: 2vh;
+    padding: 1px;
+    border-bottom: solid 1px magenta;
+}
+
+.placeLinkArrow {
+    position: relative;
+    padding-left: 30px;
+    transform: translate(35px, -10px);
+}
+
+.placeLinkArrow::before {
+    content: "";
+    position: absolute;
+    bottom: -1px; /* 要素の下からの距離 */
+    left: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid magenta;
+    border-right: 1px solid magenta;
+}
+.placeLinkArrow::after {
+    content: "";
+    position: absolute;
+    bottom: 2px; /* 要素の下からの距離 */
+    left: 8px;
+    width: 10px;
+    height: 2px;
+    background: magenta;
+    transform: rotate(135deg); /* 棒の角度調整 */
 }

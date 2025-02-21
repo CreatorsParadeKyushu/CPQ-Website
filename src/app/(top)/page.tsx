@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import topStyles from "./top.module.css";
 import aboutStyles from "./about.module.css";
+import datePlaceStyles from "./dateplace.module.css"
 
 import { Zen_Maru_Gothic } from "next/font/google";
 import { useEffect, useState } from "react";
@@ -13,6 +14,7 @@ import { RightBar } from "./_components/RightBar";
 import { Genres } from "./_components/exhibition/Genres";
 import { GenreHeading } from "./_components/exhibition/GenreHeading";
 import { Genre, GenresArray } from "@/types/Genres";
+import Link from "next/link";
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: "300",
@@ -89,7 +91,7 @@ export default function Home() {
             </div>
           </FloatIn>
           <FloatIn move="bottom">
-            <div className={aboutStyles.content} style={{ marginLeft: "18vw" }}>
+            <div className={aboutStyles.content} style={{ marginLeft: "18vw", color: "linear-gradient(red, blue)" }}>
               学生の創作作品を一般の方々に向け公開する機会を得る。
               <br />
               企画を通して学校を跨いだ学生団体間の交流を活性化する。
@@ -117,10 +119,6 @@ export default function Home() {
                 setIsHoveredGenre={setIsHoverGenre}
               />
             ))}
-            {/* <GenreHeading genre="game" />
-            <GenreHeading genre="illust" />
-            <GenreHeading genre="music" />
-            <GenreHeading genre="video" /> */}
           </div>
         </div>
       </Panel>
@@ -130,6 +128,36 @@ export default function Home() {
         detail="開催日"
         color="red"
       >
+        <div className={datePlaceStyles.date}>
+          2025.8.30 SAT 
+          <span style={{color: "red"}}> - </span>
+          31 SUN
+        </div>
+        <div className={datePlaceStyles.placeContainer}>
+          <div className={datePlaceStyles.placeHeadingAndDetail}>
+            <div className={datePlaceStyles.placeHeading}>
+              <span style={{color: "magenta"}}>&apos;</span>
+              PLACE
+            </div>
+            <div className={datePlaceStyles.placeDetail}>
+              <span style={{color: "magenta"}}>　|　</span>
+              開催場所
+            </div>
+          </div>
+          <div className={datePlaceStyles.placeNameLinkContainer}>
+            <div className={datePlaceStyles.placeText}>
+              福岡アジア美術館2階 展示室
+            </div>
+            <Link 
+              href="https://maps.app.goo.gl/BV8n5XaqrfYSaiYG7" 
+              className={datePlaceStyles.placeLink}
+              target="_blank"
+            >
+              MAP
+              <div className={datePlaceStyles.placeLinkArrow}/>
+            </Link>
+          </div>
+        </div>
       </Panel>
       <Panel
         id="members"
