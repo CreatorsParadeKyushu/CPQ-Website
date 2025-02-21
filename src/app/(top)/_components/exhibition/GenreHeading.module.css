@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.diamond {
+    width: 2vh;
+    height: 2vh;
+    background-color: lime;
+    transition: all 1s;
+    margin: 10px;
+    transform: rotate(0deg) scale(0);
+}
+.diamondView {
+    transform: rotate(495deg) scale(1);
+}
+
+
+.text {
+    padding: 30px 50px 30px 10px;
+    border-top: solid 1px gray;
+    font-size: 3vw;
+    flex-grow: 7;
+}

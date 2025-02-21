@@ -12,12 +12,21 @@
 
 .view {
     min-width: 1vw;
-    height: 500px;
+    height: 70vh;
     background-color: white;
     flex-grow: 1;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .text {
     width: 0;
-    transform: rotate(-90deg) translate(190px, 10px);
+    transform: rotate(-90deg) translate(25vh, 10px);
+}
+
+.genreImage {
+    width: auto;
+    height: 100%;
+    /* transform: skewX(10deg); */
+    object-fit: cover;
 }

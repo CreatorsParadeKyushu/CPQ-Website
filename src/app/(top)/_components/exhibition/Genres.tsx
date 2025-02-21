@@ -1,12 +1,20 @@
+import { Genre, GenresArray } from "@/types/Genres";
 import { GenreFrame } from "./GenreFrame";
 import styles from "./Genres.module.css"
 
-function Genres() {
+function Genres({isHoveredGenre, setIsHoveredGenre}: {
+    isHoveredGenre: Genre | null,
+    setIsHoveredGenre: Function
+}) {
     return (<div className={styles.container}>
-        <GenreFrame genre="game"/>
-        <GenreFrame genre="illust"/>
-        <GenreFrame genre="music"/>
-        <GenreFrame genre="video"/>
+        {GenresArray.map(genre => (
+            <GenreFrame 
+                key={genre}
+                genre={genre}
+                isHoveredGenre={isHoveredGenre}
+                setIsHoveredGenre={setIsHoveredGenre}
+            />
+        ))}
     </div>);
 }
 
