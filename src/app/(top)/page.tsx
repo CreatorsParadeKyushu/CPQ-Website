@@ -15,6 +15,7 @@ import { Genres } from "./_components/exhibition/Genres";
 import { GenreHeading } from "./_components/exhibition/GenreHeading";
 import { Genre, GenresArray } from "@/types/Genres";
 import Link from "next/link";
+import { GroupPanel } from "./_components/member/GroupPanel";
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: "300",
@@ -165,6 +166,21 @@ export default function Home() {
         detail="参加団体"
         color="yellow"
       >
+        <div>
+          <div>
+            <GroupPanel group={{
+              name: "C3", 
+              fullname: "Composite Computer Club",
+              iconSrc: "/cpq_prepare.png",
+              links: [
+                {type: "x", href: "https;//x.com"},
+                {type: "hp", href: "https://compositecomputer.club"},
+                {label: "ogame", href: "https://ogmgre.com"}
+              ],
+              belong: "九州工業大学"
+            }} />
+          </div>
+        </div>
       </Panel>
       <Panel
         id="sponsor"
