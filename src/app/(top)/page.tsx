@@ -6,7 +6,7 @@ import topStyles from "./top.module.css";
 import aboutStyles from "./about.module.css";
 import datePlaceStyles from "./dateplace.module.css"
 
-import { Zen_Maru_Gothic } from "next/font/google";
+import { Zen_Maru_Gothic, IBM_Plex_Sans_JP } from "next/font/google";
 import { useEffect, useState } from "react";
 import FloatIn from "../components/ScrollReveal/FloatIn";
 import { Panel } from "./_components/Panel";
@@ -20,6 +20,17 @@ import { GroupPanel } from "./_components/member/GroupPanel";
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: "300",
   subsets: ["latin"]
+});
+
+const ibmPlexSansJp = IBM_Plex_Sans_JP({
+  variable: "--font-ibm-plex-sans-jp",
+  subsets: ["latin"],
+  weight: "300"
+});
+const ibmPlexSansJpSemiBold = IBM_Plex_Sans_JP({
+  variable: "--font-ibm-plex-sans-jp",
+  subsets: ["latin"],
+  weight: "400"
 });
 
 export default function Home() {
@@ -44,7 +55,7 @@ export default function Home() {
   return (<>
     <div>
       <div className={styles.leftBar}>
-        <div className={styles.leftBarText}>
+        <div className={`${styles.leftBarText} ${ibmPlexSansJp.className}`}>
           | CREATORS PARADE KYUSHU |
         </div>
       </div>
@@ -76,23 +87,27 @@ export default function Home() {
       >
         <div style={{ padding: "3vh 3vw" }}>
           <FloatIn move="bottom">
-            <div className={aboutStyles.subheading} style={{ marginTop: 0 }}>
+            <div className={`${aboutStyles.subheading} ${ibmPlexSansJpSemiBold.className}`} 
+                  style={{ marginTop: 0 }}>
               クリエイターズパレード九州とは
             </div>
 
           </FloatIn>
           <FloatIn move="bottom">
-            <div className={aboutStyles.content} style={{ marginLeft: "6vw" }}>
+            <div className={`${aboutStyles.content} ${ibmPlexSansJp.className}`} 
+                  style={{ marginLeft: "6vw" }}>
               「クリエイターズパレード九州」は学生の創作物を学生団体(部活動、サークル等)ごとにブースを設け、各団体が設定したコンセプトに合わせてブースを装飾し作品を展示する企画です。
             </div>
           </FloatIn>
           <FloatIn move="bottom">
-            <div className={aboutStyles.subheading} style={{ marginLeft: "12vw" }}>
+            <div className={`${aboutStyles.subheading} ${ibmPlexSansJpSemiBold.className}`} 
+                  style={{ marginLeft: "12vw" }}>
               クリエイターズパレード九州の目的
             </div>
           </FloatIn>
           <FloatIn move="bottom">
-            <div className={aboutStyles.content} style={{ marginLeft: "18vw", color: "linear-gradient(red, blue)" }}>
+            <div className={`${aboutStyles.content} ${ibmPlexSansJp.className}`} 
+                              style={{ marginLeft: "18vw", color: "linear-gradient(red, blue)" }}>
               学生の創作作品を一般の方々に向け公開する機会を得る。
               <br />
               企画を通して学校を跨いだ学生団体間の交流を活性化する。

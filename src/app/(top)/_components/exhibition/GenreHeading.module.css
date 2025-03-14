@@ -15,10 +15,20 @@
     transform: rotate(495deg) scale(1);
 }
 
-
-.text {
+.headingContainer {
+    display: flex;
     padding: 30px 50px 30px 10px;
     border-top: solid 1px gray;
+    width: 20vw;
+}
+
+.text {
     font-size: 3vw;
-    flex-grow: 7;
+    font-weight: 100;
+}
+
+.textJp {
+    font-size: 1vw;
+    color: lime;
+    padding: 10px;
 }

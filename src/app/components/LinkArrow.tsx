@@ -10,8 +10,8 @@ function LinkArrow({strokeColor, width, height}: {
             width={width ?? 48} 
             height={height ?? 24}
             stroke={strokeColor} 
-            stroke-width="2" 
-            stroke-linecap="round"
+            strokeWidth="2" 
+            strokeLinecap="round"
         >
             <line x1="26" y1="1" x2="46" y2="1"/>
             <line x1="46" y1="22" x2="46" y2="1"/>
