@@ -6,7 +6,7 @@ import topStyles from "./top.module.css";
 import aboutStyles from "./about.module.css";
 import datePlaceStyles from "./dateplace.module.css"
 
-import { Zen_Maru_Gothic, IBM_Plex_Sans_JP } from "next/font/google";
+import { Zen_Maru_Gothic, IBM_Plex_Sans_JP, Mona_Sans } from "next/font/google";
 import { useEffect, useState } from "react";
 import FloatIn from "../components/ScrollReveal/FloatIn";
 import { Panel } from "./_components/Panel";
@@ -32,6 +32,11 @@ const ibmPlexSansJpSemiBold = IBM_Plex_Sans_JP({
   subsets: ["latin"],
   weight: "400"
 });
+
+const monaSans = Mona_Sans({
+  variable: "--font-geist-sans",
+  subsets: ["latin"]
+})
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -144,23 +149,34 @@ export default function Home() {
         detail="開催日"
         color="red"
       >
-        <div className={datePlaceStyles.date}>
-          2025.8.30 SAT 
-          <span style={{color: "red"}}> - </span>
-          31 SUN
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className={datePlaceStyles.dateContainer}>
+            <div className={`${datePlaceStyles.date} ${monaSans.className}`}>
+              2025.8.30 SAT 
+              <span style={{color: "red"}}> - </span>
+              31 SUN
+            </div>
+          </div>
+          <div 
+            className={datePlaceStyles.dotPattern} 
+            style={{width: 500, height: 200}}
+          />
         </div>
         <div className={datePlaceStyles.placeContainer}>
           <div className={datePlaceStyles.placeHeadingAndDetail}>
-            <div className={datePlaceStyles.placeHeading}>
+            <div className={`${datePlaceStyles.placeHeading} ${monaSans.className}`}>
               <span style={{color: "magenta"}}>&apos;</span>
               PLACE
             </div>
-            <div className={datePlaceStyles.placeDetail}>
+            <div 
+              className={`${datePlaceStyles.placeDetail} ${ibmPlexSansJpSemiBold.className}`}
+              style={{fontWeight: 200, fontSize: 25}}
+            >
               <span style={{color: "magenta"}}>　|　</span>
               開催場所
             </div>
           </div>
-          <div className={datePlaceStyles.placeNameLinkContainer}>
+          <div className={`${datePlaceStyles.placeNameLinkContainer} ${ibmPlexSansJpSemiBold.className}`}>
             <div className={datePlaceStyles.placeText}>
               福岡アジア美術館2階 展示室
             </div>

@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import rightBarStyles from "./rightBar.module.css"
+import { IBM_Plex_Sans_JP } from "next/font/google";
+
+const ibmPlexSansJp = IBM_Plex_Sans_JP({
+  variable: "--font-ibm-plex-sans-jp",
+  subsets: ["latin"],
+  weight: "100"
+});
 
 function RightBar(params: { isVisible: boolean }) {
     const [headingIndex, setHeadingIndex] = useState(0);
@@ -22,7 +29,7 @@ function RightBar(params: { isVisible: boolean }) {
       return (<>
         <Link href={`#${params.id}`} scroll>
           <div
-            className={rightBarStyles.Heading}
+            className={`${rightBarStyles.Heading} ${ibmPlexSansJp.className}`}
             style={{
               color: headingIndex === params.index ? params.color : "white"
             }}

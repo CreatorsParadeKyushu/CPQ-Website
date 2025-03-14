@@ -1,15 +1,32 @@
+.dateContainer {
+    --bg-gradient: linear-gradient(#666 0 100%);
+    background-image:
+        var(--bg-gradient), /* 上線 */
+        var(--bg-gradient); /* 左線 */
+    background-repeat: no-repeat;
+    background-size: 100% 1px, 1px 100%; /* 上線, 左線 */
+    background-position: left top 20px, left 20px top;
+
+    padding: 50px;
+}
+
 .date {
     font-size: 4vh;
     margin: 10vh 5vw;
 }
 
+.dotPattern {
+    background-image: 
+        radial-gradient(#666 10%, transparent 10%);
+    background-size: 20px 20px;
+}
+
 .placeContainer {
-    padding: 10px 80px 10px 10px;
+    padding: 10px 10px 10px 20%;
 }
 
 .placeHeadingAndDetail {
-    padding: 50px;
-    margin-left: 20%;
+    padding: 0 50px 0 50px;
     display: flex;
     align-items: center;
 }
@@ -26,14 +43,24 @@
 
 .placeNameLinkContainer {
     display: flex;
-    justify-content: right;
+    /* justify-content: right; */
     align-items: center;
     padding: 2vw;
+
+    --bg-gradient: linear-gradient(#666 0 100%);
+    background-image:
+        var(--bg-gradient), /* 上線 */
+        var(--bg-gradient); /* 左線 */
+    background-repeat: no-repeat;
+    background-size: 100% 1px, 1px 100%; /* 上線, 左線 */
+    background-position: left top 20px, left 20px top;
 }
 
 .placeText {
     font-size: 3vh;
     margin: 10vh;
+
+    font-size: 30px;
 }
 
 .placeLink {
@@ -44,7 +71,7 @@
 
 .placeLinkArrow {
     position: relative;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     transform: translate(35px, -10px);
 }
 
