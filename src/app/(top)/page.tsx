@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import topStyles from "./top.module.css";
 import aboutStyles from "./about.module.css";
 import datePlaceStyles from "./dateplace.module.css"
+import membersStyles from "./members.module.css";
 
 import { Zen_Maru_Gothic, IBM_Plex_Sans_JP, Mona_Sans } from "next/font/google";
 import { useEffect, useState } from "react";
@@ -15,7 +16,8 @@ import { Genres } from "./_components/exhibition/Genres";
 import { GenreHeading } from "./_components/exhibition/GenreHeading";
 import { Genre, GenresArray } from "@/types/Genres";
 import Link from "next/link";
-import { GroupPanel } from "./_components/member/GroupPanel";
+import { Group, GroupPanel } from "./_components/member/GroupPanel";
+import { getWindowSize } from "@/utils/useWindowSize";
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: "300",
@@ -40,6 +42,8 @@ const monaSans = Mona_Sans({
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [groups, setGroups] = useState<Group[]>([]);
+  const windowSize = getWindowSize();
 
   // Exhibition Genre
   const [isHoveredGenre, setIsHoverGenre] = useState<Genre | null>(null);
@@ -52,6 +56,14 @@ export default function Home() {
   };
 
   useEffect(() => {
+    const fetchGroups = async () => {
+      const res = await fetch("/data/members.json");
+      const data = await res.json();
+
+      setGroups(data.members);
+    };
+    fetchGroups();
+    
     toggleVisibility();
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
@@ -197,19 +209,30 @@ export default function Home() {
         detail="参加団体"
         color="yellow"
       >
-        <div>
-          <div>
-            <GroupPanel group={{
-              name: "C3", 
-              fullname: "Composite Computer Club",
-              iconSrc: "/cpq_prepare.png",
-              links: [
-                {type: "x", href: "https;//x.com"},
-                {type: "hp", href: "https://compositecomputer.club"},
-                {label: "ogame", href: "https://ogmgre.com"}
-              ],
-              belong: "九州工業大学"
-            }} />
+        <div style={{borderLeft: "solid 1px #666", padding: "25px"}}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${windowSize.width > 1500 ? "2" : "1"}, 1fr)`,
+          }}>
+            <GroupPanel />
+            {windowSize.width > 1500 ? <GroupPanel /> : <></>}
+            {groups.map((group, index) => (
+              <GroupPanel 
+                key={index}
+                group={group} 
+              />
+            ))}
+          </div>
+          <div className={membersStyles.membersSummaryCard}>
+            <div style={{display: "flex"}}>
+              <div className={membersStyles.membersSummaryCardText}>
+                we are looking for having you join us
+              </div>
+              <div style={{margin: "0 20px", width: 200, borderBottom: "solid 1px #666", transform: "translateY(-50%)"}} />
+            </div>
+            <div className={membersStyles.membersSummaryCardNumber}>
+              <span style={{fontSize: 70}}>{groups.length}</span>団体
+            </div>
           </div>
         </div>
       </Panel>

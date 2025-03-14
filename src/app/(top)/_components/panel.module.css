@@ -2,8 +2,9 @@
     color: #f2f2f2;
     background-color: black;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 90px;
+    overflow: auto;
 }
 
 .headingAndDetail{

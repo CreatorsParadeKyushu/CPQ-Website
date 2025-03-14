@@ -1,0 +1,102 @@
+{
+    "members": [
+        {
+            "name": "Qpic",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": "九州大学"
+        },
+        {
+            "name": "impression!",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": "九州大学"
+        },
+        {
+            "name": "ふゲだく！",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": "福岡情報IT・クリエイター専門学校"
+        },
+        {
+            "name": "C3",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": "九州工業大学"
+        },
+        {
+            "name": "作るっちゃん",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": ""
+        },
+        {
+            "name": "じょぎ",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": "福岡工業大学"
+        },
+        {
+            "name": "福大ピアプロ",
+            "links": [
+                {
+                    "type": "x",
+                    "href": "https;//x.com"
+                },
+                {
+                    "type": "hp",
+                    "href": "https://compositecomputer.club"
+                }
+            ],
+            "belong": "福岡大学"
+        }
+    ]
+}

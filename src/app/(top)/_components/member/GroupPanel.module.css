@@ -1,23 +1,54 @@
 .frame {
-    
-}
-
-.container {
+    margin: 0 10px;
+    padding: 25px;
+    border-bottom: solid 1px #666;
     display: flex;
+    align-items: end;
 }
 
-.nameContainer{
-
+.name{
+    flex-basis: 50%;
+    font-size: 30px;
 }
 
 .linkContainer {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: space-between;
+}
 
+.link {
+    display: flex;
+    margin: 0 10px;
 }
 
 .linkArrow {
-    width: 20px;
+    position: relative;
+    transform: translate(-5px, -10px);
 }
 
-.belongText {
-    
+.linkArrow::before {
+    content: "";
+    position: absolute;
+    bottom: -1px; /* 要素の下からの距離 */
+    left: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid yellow;
+    border-right: 1px solid yellow;
+}
+.linkArrow::after {
+    content: "";
+    position: absolute;
+    bottom: 2px; /* 要素の下からの距離 */
+    left: 8px;
+    width: 10px;
+    height: 2px;
+    background: yellow;
+    transform: rotate(135deg); /* 棒の角度調整 */
+}
+
+.belong {
+    flex-basis: 25%;
+    text-align: right;
 }

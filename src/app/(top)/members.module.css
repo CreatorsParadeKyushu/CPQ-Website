@@ -1,0 +1,18 @@
+.membersSummaryCard {
+    background-color: #222;
+    outline: solid 1px #262626;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin: 50px 0;
+    
+}
+
+.membersSummaryCardText {
+    color: #ccc;
+}
+.membersSummaryCardNumber {
+    color: white;
+}
