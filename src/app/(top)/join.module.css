@@ -1,0 +1,40 @@
+.headingAbout {
+    text-align: center;
+    font-size: 30px;
+}
+
+.googleForm {
+    padding: 10px 50px;
+    margin: 30px;
+    outline: solid 1px #ffaf00;
+    display: block;
+    text-align: center;
+}
+
+.detailContainer {
+    padding: 30px 10px;
+    border-bottom: solid 1px #666;
+}
+
+.heading {
+    font-size: 30px;
+}
+
+.list {
+    margin: 0 0 0 30px;
+}
+
+.list li {
+    margin: 10px 0;
+}
+
+.listTwoColumn {
+    margin: 0 0 0 30px;
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: repeat(2, auto);
+}
+
+.listTwoColumn li {
+    margin: 10px 0;
+}

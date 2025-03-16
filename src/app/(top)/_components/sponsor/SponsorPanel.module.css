@@ -1,0 +1,43 @@
+.sponsorPanel {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: 1px solid white; */
+}
+
+.cross-box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross-box::before,
+.cross-box::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+}
+
+.cross-box::before {
+/* 横線 */
+width: 100%;
+height: 2px;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+}
+
+.cross-box::after {
+/* 縦線 */
+width: 2px;
+height: 100%;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+}

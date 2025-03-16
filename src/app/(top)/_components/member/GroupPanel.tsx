@@ -1,7 +1,5 @@
-import Image from "next/image";
 import styles from "./GroupPanel.module.css"
 import Link from "next/link";
-import { LinkArrow } from "@/app/components/LinkArrow";
 import { IBM_Plex_Sans_JP, Mona_Sans } from "next/font/google";
 
 type LinkType = "x" | "hp";

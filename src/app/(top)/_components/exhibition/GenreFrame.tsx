@@ -1,13 +1,7 @@
 import Image from "next/image";
 import styles from "./GenreFrame.module.css"
 import { Genre } from "@/types/Genres";
-import { IBM_Plex_Sans_JP, Mona_Sans } from "next/font/google";
-
-const ibmPlexSansJp = IBM_Plex_Sans_JP({
-  variable: "--font-ibm-plex-sans-jp",
-  subsets: ["latin"],
-  weight: "100"
-});
+import { Mona_Sans } from "next/font/google";
 
 const monaSans = Mona_Sans({
   variable: "--font-geist-sans",

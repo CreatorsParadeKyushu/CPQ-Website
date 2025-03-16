@@ -49,7 +49,7 @@ function RightBar(params: { isVisible: boolean }) {
         <Link href="#top" >
           <Image
             alt="cpq"
-            src="/cpq_prepare.png"
+            src="/image/cpq_square.png"
             width={200}
             height={200}
             className={rightBarStyles.Image}
