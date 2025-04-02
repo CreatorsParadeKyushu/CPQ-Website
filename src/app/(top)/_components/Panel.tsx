@@ -14,7 +14,14 @@ const ibmPlexSansJp = IBM_Plex_Sans_JP({
 
 function Panel(params: { children?: ReactNode, id: string, heading: string, detail: string, color: string }) {
   return (
-    <div className={panelStyles.backBlackPanel} id={params.id}>
+    <div 
+      className={panelStyles.backBlackPanel} 
+      style={params.id === "contact" ? 
+        {height: "50vh", minHeight: "50vh"} :
+        {}
+      } 
+      id={params.id}
+    >
       <div className={panelStyles.headingAndDetail}>
         <span className={`${panelStyles.heading} ${monaSans.className}`} 
           style={{fontSize: 68, fontWeight: 600}}>

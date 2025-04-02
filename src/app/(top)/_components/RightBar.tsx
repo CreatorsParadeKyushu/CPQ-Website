@@ -12,7 +12,7 @@ const ibmPlexSansJp = IBM_Plex_Sans_JP({
 
 function RightBar(params: { isVisible: boolean }) {
     const [headingIndex, setHeadingIndex] = useState(0);
-    const colors = ["white", "cyan", "lime", "red", "yellow", "blue", "orange", "aquamarine"];
+    const colors = ["white", "cyan", "lime", "red", "yellow", "blue", "orange", "#0fb"];
   
     const updateHeadingIndex = () => {
       setHeadingIndex(Math.floor((window.scrollY + window.innerHeight / 4) / window.innerHeight));
@@ -66,7 +66,7 @@ function RightBar(params: { isVisible: boolean }) {
           <Heading id="members" text="MEMBERS" color="yellow" index={4} />
           <Heading id="sponsor" text="SPONSOR" color="blue" index={5} />
           <Heading id="join" text="JOIN" color="orange" index={6} />
-          <Heading id="contact" text="CONTACT" color="aquamarine" index={7} />
+          <Heading id="contact" text="CONTACT" color="#0fb" index={7} />
         </div>
       </div>
     );

@@ -22,6 +22,8 @@ import { Group, GroupPanel } from "./_components/member/GroupPanel";
 import { useWindowSize } from "@/utils/useWindowSize";
 import { Sponsor } from "@/types/Sponsor";
 import { SponsorPanel } from "./_components/sponsor/SponsorPanel";
+import { Footer } from "./_components/Footer";
+import { useIsBottom } from "@/utils/useIsBottom";
 
 const ibmPlexSansJp = IBM_Plex_Sans_JP({
   variable: "--font-ibm-plex-sans-jp",
@@ -44,6 +46,7 @@ export default function Home() {
   const [groups, setGroups] = useState<Group[]>([]);
   const [sponsors, setSponsors] = useState<Sponsor[]>([]);
   const windowSize = useWindowSize();
+  const isBottom = useIsBottom();
 
   // Exhibition Genre
   const [isHoveredGenre, setIsHoverGenre] = useState<Genre | null>(null);
@@ -83,7 +86,7 @@ export default function Home() {
           | CREATORS PARADE KYUSHU |
         </div>
       </div>
-      <RightBar isVisible={isVisible} />
+      <RightBar isVisible={isVisible && !isBottom} />
       <div id="top" className={topStyles.backPanel}>
         <div className={topStyles.container}>
           <div className={topStyles.imageContainer}>
@@ -381,9 +384,23 @@ export default function Home() {
         id="contact"
         heading="CONTACT"
         detail="コンタクト"
-        color="aquamarine"
+        color="#0fb"
       >
+        <div 
+          className={`${ibmPlexSansJp}`}
+          style={{fontSize: 24}}
+        >
+          <span style={{color: "#0fb"}}>◆　</span>
+          協賛をお考えの企業様やその他の方々は以下のメールより要件をお伝えください
+        </div>
+        <div 
+          className={`${ibmPlexSansJp}`}
+          style={{fontSize: 24, padding: 30}}
+        >
+          <Link href="">CONTACT</Link>
+        </div>
       </Panel>
+      <Footer />
     </div>
   </>);
 }
