@@ -10,3 +10,34 @@
     font-size: 2vh;
     margin-top: 10vh;
 }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .subheading {
+        font-size: 18px;
+        margin-top: 4vh;
+        margin-left: 0 !important;
+        line-height: 1.4;
+    }
+    
+    .content {
+        font-size: 14px;
+        margin-top: 3vh;
+        margin-left: 0 !important;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .subheading {
+        font-size: 16px;
+        margin-top: 3vh;
+        line-height: 1.4;
+    }
+    
+    .content {
+        font-size: 13px;
+        margin-top: 2.5vh;
+        line-height: 1.6;
+    }
+}

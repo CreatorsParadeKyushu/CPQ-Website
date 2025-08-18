@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    z-index: 1000;
 }
 .leftBarText{
     font-size: 15px;
@@ -16,4 +17,22 @@
     transform-origin: center;
     white-space: nowrap;
     color: #f2f2f2;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .leftBar {
+        width: 20px;
+        padding: 5px;
+    }
+    .leftBarText {
+        font-size: 12px;
+        transform: rotate(90deg) translate(-8vh);
+    }
+}
+
+@media (max-width: 480px) {
+    .leftBar {
+        display: none;
+    }
 }

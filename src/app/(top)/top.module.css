@@ -35,3 +35,48 @@
 .titleText {
     text-align: left;
 }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20% 5% 20% 5%;
+        text-align: center;
+    }
+    
+    .imageContainer {
+        padding: 5%;
+        order: 1;
+    }
+    
+    .image {
+        width: 60%;
+        max-width: 200px;
+    }
+    
+    .title {
+        order: 2;
+        font-size: 12vw;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .titleText {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15% 5% 15% 5%;
+    }
+    
+    .title {
+        font-size: 15vw;
+    }
+    
+    .image {
+        width: 50%;
+        max-width: 150px;
+    }
+}

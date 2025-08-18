@@ -11,74 +11,55 @@ const ibmPlexSansJp = IBM_Plex_Sans_JP({
   weight: "500"
 });
 
-function Footer(){
-  function HeaderLink({id, text}: {id: string, text?: string}) {
+function Footer() {
+  function HeaderLink({ id, text }: { id: string, text?: string }) {
     return (
-      <div style={{padding: 20}}>
+      <div className={styles.headerLink}>
         <Link href={`#${id}`}>
           {text ? text.toUpperCase() : id.toUpperCase()}
         </Link>
       </div>
     )
   }
-  
+
   return (
     <div className={styles.container}>
-      <div
-        style={{display: "flex"}}
-      >
-        <div
-          style={{flexGrow: 1}}
-        >
+      <div className={styles.content}>
+        <div className={styles.logoSection}>
           <Image
             alt="cpq_logo"
             src="/image/cpq.png"
             width={1000}
             height={500}
-            style={{
-              padding: 120,
-              objectFit: "contain"
-            }}
+            className={styles.logo}
           />
         </div>
-        <div
-          style={{flexGrow: 1}}
-        >
-          <div>
-            <div 
-              className={styles.linkContainer}
-            >
-              <Link 
-                href="https://x.com/Creators_Parede"
-              >
+        <div className={styles.linksSection}>
+          <div className={styles.externalLinks}>
+            <div className={styles.linkContainer}>
+              <Link href="https://x.com/Creators_Parede">
                 X (Twitter)
               </Link>
             </div>
-            <div 
-              className={styles.linkContainer}
-            >
-              <Link 
-                href="mailto:creators.parade.kyushu@gmail.com"
-              >
+            <div className={styles.linkContainer}>
+              <Link href="mailto:creators.parade.kyushu@gmail.com">
                 Mail
               </Link>
             </div>
           </div>
         </div>
-        <div
-          style={{flexGrow: 1}}
-        >
+        <div className={styles.navigationSection}>
           <HeaderLink id="about" />
           <HeaderLink id="exhibition" />
-          <HeaderLink id="date_place" text="date&place"/>
+          <HeaderLink id="date_place" text="date&place" />
           <HeaderLink id="members" />
           <HeaderLink id="sponsor" />
           <HeaderLink id="join" />
           <HeaderLink id="contact" />
         </div>
       </div>
-      <div style={{paddingRight: 100}}>
-        <FitText 
+      <div className={styles.titleSection}>
+        <FitText
           className={ibmPlexSansJp.className}
         >
           CREATORS PARADE KYUSHU
@@ -88,4 +69,4 @@ function Footer(){
   )
 }
 
-export {Footer}
+export { Footer }

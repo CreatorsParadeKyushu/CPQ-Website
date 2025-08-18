@@ -1,34 +1,59 @@
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .diamond {
-    width: 2vh;
-    height: 2vh;
-    background-color: lime;
-    transition: all 1s;
-    margin: 10px;
-    transform: rotate(0deg) scale(0);
+  width: 2vh;
+  height: 2vh;
+  background-color: lime;
+  transition: all 1s;
+  margin: 10px;
+  transform: rotate(0deg) scale(0);
 }
 .diamondView {
-    transform: rotate(495deg) scale(1);
+  transform: rotate(495deg) scale(1);
 }
 
 .headingContainer {
-    display: flex;
-    padding: 30px 50px 30px 10px;
-    border-top: solid 1px gray;
-    width: 20vw;
+  display: flex;
+  padding: 30px 50px 30px 10px;
+  border-top: solid 1px gray;
+  flex: 1;
 }
 
 .text {
-    font-size: 3vw;
-    font-weight: 100;
+  font-size: 3vw;
+  font-weight: 100;
 }
 
 .textJp {
-    font-size: 1vw;
-    color: lime;
-    padding: 10px;
+  font-size: 1vw;
+  color: lime;
+  padding: 10px;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .text {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .textJp {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .textJp {
+    font-size: 12px;
+    padding: 3px;
+  }
 }

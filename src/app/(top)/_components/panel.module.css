@@ -24,3 +24,57 @@
 .panelChildrenContainer {
     margin: 3vh 200px 10vh 80px;
 }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .backBlackPanel {
+        padding: 0 20px;
+    }
+    
+    .headingAndDetail {
+        flex-direction: column;
+        padding: 40px 20px 30px 20px;
+        text-align: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .heading {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    
+    .detail {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .panelChildrenContainer {
+        margin: 3vh 15px 5vh 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .backBlackPanel {
+        padding: 0 15px;
+    }
+    
+    .headingAndDetail {
+        padding: 30px 15px 25px 15px;
+        gap: 12px;
+    }
+    
+    .heading {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    
+    .detail {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .panelChildrenContainer {
+        margin: 2vh 10px 4vh 10px;
+    }
+}

@@ -1,5 +1,28 @@
 {
-    "sponsors": [
-        
-    ]
+  "sponsors": [
+    {
+      "name": "エピックゲームズジャパン",
+      "logoSrc": "/image/EpicGamesJapan.png",
+      "url": "",
+      "rank": "platinum"
+    },
+    {
+      "name": "福岡市",
+      "logoSrc": "/image/fukuokacity.png",
+      "url": "",
+      "rank": ""
+    },
+    {
+      "name": "nu source",
+      "logoSrc": "/image/NuSource.png",
+      "url": "",
+      "rank": ""
+    },
+    {
+      "name": "Tricore",
+      "logoSrc": "/image/Tricore.png",
+      "url": "",
+      "rank": ""
+    }
+  ]
 }

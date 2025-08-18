@@ -13,6 +13,7 @@
     justify-items: center;
     opacity: 0;
     pointer-events: none;
+    z-index: 1000;
 }
 .rightBar.visible {
     opacity: 1;
@@ -42,4 +43,35 @@
 }
 .Heading:hover{
     border-bottom: solid 1px gray;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .rightBar {
+        width: 120px;
+        padding: 8px;
+    }
+    
+    .Image {
+        width: 100px;
+        height: 100px;
+        padding: 8px;
+    }
+    
+    .Block {
+        width: 25px;
+        height: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .Heading {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rightBar {
+        display: none;
+    }
 }

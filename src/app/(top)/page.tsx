@@ -148,12 +148,21 @@ export default function Home() {
         detail="展示ジャンル"
         color="lime"
       >
-        <div style={{ display: "flex" }}>
+        <div style={{
+          display: "flex",
+          flexDirection: windowSize.width <= 768 ? "column" : "row"
+        }}>
           <Genres
             isHoveredGenre={isHoveredGenre}
             setIsHoveredGenre={setIsHoverGenre}
           />
-          <div style={{ flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: 10 }}>
+          <div style={{
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: windowSize.width <= 768 ? 5 : 10
+          }}>
             {GenresArray.map(genre => (
               <GenreHeading
                 key={genre}
@@ -253,21 +262,29 @@ export default function Home() {
         color="blue"
       >
         <div className={sponsorStyles.container}>
-          {sponsors.length > 0 ? sponsors.map((sponsor, index) => (
-            <SponsorPanel key={index}>
-              <Image
-                alt="logo"
-                src={sponsor.logoSrc}
-                width={200}
-                height={200}
-              />
-            </SponsorPanel>
-          ))
-            :
-            <SponsorPanel>
-              募集中
-            </SponsorPanel>
-          }
+          {/* プラチナスポンサー - 独立した行で表示 */}
+          {sponsors.filter(sponsor => sponsor.rank === 'platinum').length > 0 && (
+            <div className={sponsorStyles.platinumSponsorsRow}>
+              {sponsors
+                .filter(sponsor => sponsor.rank === 'platinum')
+                .map((sponsor, index) => (
+                  <SponsorPanel key={`platinum-${index}`} sponsor={sponsor} />
+                ))}
+            </div>
+          )}
+
+          {/* 通常スポンサー - グリッドレイアウト */}
+          <div className={sponsorStyles.sponsorsGrid}>
+            {sponsors.filter(sponsor => sponsor.rank !== 'platinum').length > 0 ? (
+              sponsors
+                .filter(sponsor => sponsor.rank !== 'platinum')
+                .map((sponsor, index) => (
+                  <SponsorPanel key={`normal-${index}`} sponsor={sponsor} />
+                ))
+            ) : sponsors.length === 0 ? (
+              <SponsorPanel />
+            ) : null}
+          </div>
         </div>
       </Panel>
       <Panel
@@ -276,28 +293,47 @@ export default function Home() {
         detail="参加方法"
         color="orange"
       >
-        <div style={{ display: "flex" }}>
-          <div style={{padding: 50, flexGrow: 2}}>
+        <div style={{
+          display: "flex",
+          flexDirection: windowSize.width <= 768 ? "column" : "row"
+        }}>
+          <div style={{
+            padding: windowSize.width <= 768 ? 20 : 50,
+            flexGrow: 2
+          }}>
             <div className={joinStyles.headingAbout}>
               <span style={{ fontSize: 10, color: "#ffaf00", verticalAlign: "middle" }}>◆　</span>
               参加申し込みについて
               <span style={{ fontSize: 10, color: "#ffaf00", verticalAlign: "middle" }}>　◆</span>
             </div>
-            <Link 
+            <Link
               href="https://example.com"
               className={`${joinStyles.googleForm} ${ibmPlexSansJp.className}`}
             >
               Google Form
             </Link>
-            <div style={{textAlign: "center"}}>
+            <div style={{
+              textAlign: "center",
+              fontSize: windowSize.width <= 480 ? 12 : windowSize.width <= 768 ? 13 : 16,
+              lineHeight: 1.5,
+              margin: "15px 0"
+            }}>
               上記Googleフォームに回答してください
             </div>
-            <div style={{textAlign: "center"}}>
+            <div style={{
+              textAlign: "center",
+              fontSize: windowSize.width <= 480 ? 12 : windowSize.width <= 768 ? 13 : 16,
+              lineHeight: 1.5,
+              margin: "15px 0"
+            }}>
               具体的に必要となる情報につきましても、Googleフォームの案内に従って入力をお願いします
             </div>
           </div>
-          <div 
-            style={{padding: 10, flexGrow: 3}}
+          <div
+            style={{
+              padding: windowSize.width <= 768 ? 20 : 10,
+              flexGrow: 3
+            }}
             className={ibmPlexSansJp.className}
           >
             <div
@@ -338,8 +374,12 @@ export default function Home() {
                 <span style={{ fontSize: 10, verticalAlign: "middle", color: "#ffaf00" }}>◆　</span>
                 展示における貸与品・備品について
               </div>
-              <div style={{display: "flex", padding: "0 0 0 30px"}}>
-                <div style={{padding: 10}}>
+              <div style={{
+                display: "flex",
+                flexDirection: windowSize.width <= 768 ? "column" : "row",
+                padding: windowSize.width <= 768 ? "0" : "0 0 0 30px"
+              }}>
+                <div style={{ padding: 10 }}>
                   <div>
                     各団体には以下のものをこちらから貸与可能です。
                   </div>
@@ -350,7 +390,10 @@ export default function Home() {
                     <li>延長コード</li>
                   </ul>
                 </div>
-                <div style={{padding: 10, marginLeft: 20}}>
+                <div style={{
+                  padding: 10,
+                  marginLeft: windowSize.width <= 768 ? 0 : 20
+                }}>
                   <div>
                     希望者向け（数に限りがあるため）
                   </div>
@@ -370,10 +413,10 @@ export default function Home() {
                 展示装飾について
               </div>
               <div>
-                「１　企画概要」に記述の通り、各団体にはコンセプトを設定していただき、それに従いブースの装飾を行っていただきます。<br/>
+                「１　企画概要」に記述の通り、各団体にはコンセプトを設定していただき、それに従いブースの装飾を行っていただきます。<br />
                 コンセプトは各団体自由に設定してください。
-                展示する作品に合わせて設定することも、コンセプトに沿って作品を制作することも自由に決定していただいて問題ありません。<br/>
-                ブース装飾例につきましては参加アンケート回答後の面談にて詳しく説明いたします。<br/>
+                展示する作品に合わせて設定することも、コンセプトに沿って作品を制作することも自由に決定していただいて問題ありません。<br />
+                ブース装飾例につきましては参加アンケート回答後の面談にて詳しく説明いたします。<br />
                 展示ブースの詳細（広さなど）につきましては参加団体が決定次第追って連絡いたします。
               </div>
             </div>
@@ -386,16 +429,26 @@ export default function Home() {
         detail="コンタクト"
         color="#0fb"
       >
-        <div 
+        <div
           className={`${ibmPlexSansJp}`}
-          style={{fontSize: 24}}
+          style={{
+            fontSize: windowSize.width <= 480 ? 14 : windowSize.width <= 768 ? 16 : 24,
+            padding: windowSize.width <= 768 ? "15px" : "0",
+            textAlign: windowSize.width <= 768 ? "center" : "left",
+            lineHeight: 1.5
+          }}
         >
-          <span style={{color: "#0fb"}}>◆　</span>
+          <span style={{ color: "#0fb" }}>◆　</span>
           協賛をお考えの企業様やその他の方々は以下のメールより要件をお伝えください
         </div>
-        <div 
+        <div
           className={`${ibmPlexSansJp}`}
-          style={{fontSize: 24, padding: 30}}
+          style={{
+            fontSize: windowSize.width <= 480 ? 16 : windowSize.width <= 768 ? 18 : 24,
+            padding: windowSize.width <= 480 ? 15 : windowSize.width <= 768 ? 20 : 30,
+            textAlign: "center",
+            lineHeight: 1.4
+          }}
         >
           <Link href="">CONTACT</Link>
         </div>
