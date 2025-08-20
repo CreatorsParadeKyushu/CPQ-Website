@@ -2,16 +2,16 @@ import { Genre, GenresArray } from "@/types/Genres";
 import { GenreFrame } from "./GenreFrame";
 import styles from "./Genres.module.css"
 
-function Genres({isHoveredGenre, setIsHoveredGenre}: {
+function Genres({ isHoveredGenre, setIsHoveredGenre }: {
     isHoveredGenre: Genre | null,
     setIsHoveredGenre: (genre: Genre | null) => void
 }) {
     return (<div className={styles.container}>
         {GenresArray.map(genre => (
-            <GenreFrame 
+            <GenreFrame
                 key={genre}
                 genre={genre}
-                imgSrc={`/cpq_prepare.png`}
+                imgSrc={`/image/genres/${genre}.png`}
                 isHoveredGenre={isHoveredGenre}
                 setIsHoveredGenre={setIsHoveredGenre}
             />
@@ -19,4 +19,4 @@ function Genres({isHoveredGenre, setIsHoveredGenre}: {
     </div>);
 }
 
-export {Genres}
+export { Genres }

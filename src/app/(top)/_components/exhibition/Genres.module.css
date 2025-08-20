@@ -20,7 +20,7 @@
 @media (max-width: 480px) {
   .container {
     margin: 0;
-    padding: 0px 1px;
+    padding: 0px 30px;
     width: 100%;
     box-sizing: border-box;
   }
