@@ -183,9 +183,9 @@ export default function Home() {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className={datePlaceStyles.dateContainer}>
             <div className={`${datePlaceStyles.date} ${monaSans.className}`}>
-              2025.8.30 SAT
+              2025.8.31 SUN
               <span style={{ color: "red" }}> - </span>
-              31 SUN
+              9.1 MON
             </div>
           </div>
           <div
@@ -209,10 +209,10 @@ export default function Home() {
           </div>
           <div className={`${datePlaceStyles.placeNameLinkContainer} ${ibmPlexSansJpSemiBold.className}`}>
             <div className={datePlaceStyles.placeText}>
-              福岡アジア美術館2階 展示室
+              福岡市科学館 企画ギャラリー
             </div>
             <Link
-              href="https://maps.app.goo.gl/BV8n5XaqrfYSaiYG7"
+              href="https://maps.app.goo.gl/P9J3fnDi44ym2yMF6"
               className={datePlaceStyles.placeLink}
               target="_blank"
             >
