@@ -209,7 +209,7 @@ export default function Home() {
           </div>
           <div className={`${datePlaceStyles.placeNameLinkContainer} ${ibmPlexSansJpSemiBold.className}`}>
             <div className={datePlaceStyles.placeText}>
-              福岡市科学館 企画ギャラリー
+              福岡市科学館 3階 企画展示室
             </div>
             <Link
               href="https://maps.app.goo.gl/P9J3fnDi44ym2yMF6"
