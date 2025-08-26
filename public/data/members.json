@@ -85,6 +85,20 @@
       "belong": "福岡工業大学"
     },
     {
+      "name": "福大ピアプロ",
+      "links": [
+        {
+          "type": "x",
+          "href": "https;//x.com"
+        },
+        {
+          "type": "hp",
+          "href": "https://compositecomputer.club"
+        }
+      ],
+      "belong": "福岡大学"
+    },
+    {
       "name": "ゲーム作ろうラボ",
       "links": [],
       "belong": "九州産業大学"
@@ -93,11 +107,6 @@
       "name": "デジタルアート部",
       "links": [],
       "belong": "九州産業大学"
-    },
-    {
-      "name": "ANIMA Production",
-      "links": [],
-      "belong": "九州大学"
     },
     {
       "name": "馬出美術部",
