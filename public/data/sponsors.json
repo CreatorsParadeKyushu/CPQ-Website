@@ -7,12 +7,6 @@
       "rank": "platinum"
     },
     {
-      "name": "福岡市",
-      "logoSrc": "/image/fukuokacity.png",
-      "url": "",
-      "rank": ""
-    },
-    {
       "name": "nu source",
       "logoSrc": "/image/NuSource.png",
       "url": "",
@@ -21,6 +15,14 @@
     {
       "name": "Tricore",
       "logoSrc": "/image/Tricore.png",
+      "url": "",
+      "rank": ""
+    }
+  ],
+  "cosponsors": [
+    {
+      "name": "福岡市",
+      "logoSrc": "/image/fukuokacity.png",
       "url": "",
       "rank": ""
     }

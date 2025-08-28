@@ -45,6 +45,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [groups, setGroups] = useState<Group[]>([]);
   const [sponsors, setSponsors] = useState<Sponsor[]>([]);
+  const [cosponsors, setCosponsors] = useState<Sponsor[]>([]);
   const windowSize = useWindowSize();
   const isBottom = useIsBottom();
 
@@ -70,6 +71,7 @@ export default function Home() {
       const data = await res.json();
 
       setSponsors(data.sponsors);
+      setCosponsors(data.cosponsors)
     };
     fetchGroups();
     fetchSponsors();
@@ -261,6 +263,7 @@ export default function Home() {
         detail="スポンサー"
         color="blue"
       >
+        <div style={{ fontSize: "3vw", textAlign: "center" }}>協賛</div>
         <div className={sponsorStyles.container}>
           {/* プラチナスポンサー - 独立した行で表示 */}
           {sponsors.filter(sponsor => sponsor.rank === 'platinum').length > 0 && (
@@ -285,6 +288,18 @@ export default function Home() {
               <SponsorPanel />
             ) : null}
           </div>
+        </div>
+        <div style={{ fontSize: "3vw", textAlign: "center" }}>後援</div>
+        <div className={sponsorStyles.sponsorsGrid}>
+          {cosponsors.filter(cosponsor => cosponsor.rank !== 'platinum').length > 0 ? (
+            cosponsors
+              .filter(cosponsor => cosponsor.rank !== 'platinum')
+              .map((cosponsor, index) => (
+                <SponsorPanel key={`normal-${index}`} sponsor={cosponsor} />
+              ))
+          ) : cosponsors.length === 0 ? (
+            <SponsorPanel />
+          ) : null}
         </div>
       </Panel>
       <Panel
