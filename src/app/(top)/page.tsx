@@ -54,7 +54,7 @@ export default function Home() {
   const [isHoveredGenre, setIsHoverGenre] = useState<Genre | null>(null);
 
   const toggleVisibility = () => {
-    if (window.scrollY >= window.innerHeight * 7 / 4)
+    if (window.scrollY >= window.innerHeight * 5 / 4)
       setIsVisible(true)
     else
       setIsVisible(false);
