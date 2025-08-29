@@ -3,19 +3,19 @@
     {
       "name": "エピックゲームズジャパン",
       "logoSrc": "/image/EpicGamesJapan.png",
-      "url": "",
+      "url": "https://www.epicgames.com/site/ja/home",
       "rank": "platinum"
     },
     {
       "name": "nu source",
       "logoSrc": "/image/NuSource.png",
-      "url": "",
+      "url": "https://nusource.nulab.com/ja/",
       "rank": ""
     },
     {
       "name": "Tricore",
       "logoSrc": "/image/Tricore.png",
-      "url": "",
+      "url": "https://www.tri-core.co.jp/",
       "rank": ""
     }
   ],
@@ -23,7 +23,7 @@
     {
       "name": "福岡市",
       "logoSrc": "/image/fukuokacity.png",
-      "url": "",
+      "url": "https://www.city.fukuoka.lg.jp/",
       "rank": ""
     }
   ]

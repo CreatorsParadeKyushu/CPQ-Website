@@ -44,6 +44,8 @@ function Footer() {
             <div className={styles.linkContainer}>
               <Link href="mailto:creators.parade.kyushu@gmail.com">
                 Mail
+                <br />
+                creators.parade.kyushu@gmail.com
               </Link>
             </div>
           </div>

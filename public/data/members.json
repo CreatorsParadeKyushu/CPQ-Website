@@ -5,11 +5,11 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
+          "href": "https://x.com/Qpic_Official"
         },
         {
           "type": "hp",
-          "href": "https://compositecomputer.club"
+          "href": "https://www.qpic.jp/"
         }
       ],
       "belong": "九州大学"
@@ -19,11 +19,11 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
+          "href": "https://x.com/impre_official"
         },
         {
-          "type": "hp",
-          "href": "https://compositecomputer.club"
+          "type": "insta",
+          "href": "https://www.instagram.com/impre_ssion.q/#"
         }
       ],
       "belong": "九州大学"
@@ -33,11 +33,7 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
-        },
-        {
-          "type": "hp",
-          "href": "https://compositecomputer.club"
+          "href": "https://x.com/fugedaku"
         }
       ],
       "belong": "福岡情報IT・クリエイター専門学校"
@@ -47,7 +43,7 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
+          "href": "https://x.com/c3_kyutech"
         },
         {
           "type": "hp",
@@ -61,11 +57,7 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
-        },
-        {
-          "type": "hp",
-          "href": "https://compositecomputer.club"
+          "href": "https://x.com/tukuruttyan"
         }
       ],
       "belong": ""
@@ -75,11 +67,11 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
+          "href": "https://x.com/jyogi_pr"
         },
         {
           "type": "hp",
-          "href": "https://compositecomputer.club"
+          "href": "https://jyogi.net/"
         }
       ],
       "belong": "福岡工業大学"
@@ -89,28 +81,51 @@
       "links": [
         {
           "type": "x",
-          "href": "https;//x.com"
-        },
-        {
-          "type": "hp",
-          "href": "https://compositecomputer.club"
+          "href": "https://x.com/fuprogram"
         }
       ],
       "belong": "福岡大学"
     },
     {
       "name": "ゲーム作ろうラボ",
-      "links": [],
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/ksu_gamelab"
+        },
+        {
+          "type": "hp",
+          "href": "https://ksugamelab.com/"
+        }
+      ],
       "belong": "九州産業大学"
     },
     {
       "name": "デジタルアート部",
-      "links": [],
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/ksu_digitalart"
+        },
+        {
+          "type": "insta",
+          "href": "https://www.instagram.com/ksu_digitalart1192/?hl=ja"
+        }
+      ],
       "belong": "九州産業大学"
     },
     {
       "name": "馬出美術部",
-      "links": [],
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/maidashi_art"
+        },
+        {
+          "type": "insta",
+          "href": "https://www.instagram.com/maidashi_art/#"
+        }
+      ],
       "belong": "九州大学"
     }
   ]

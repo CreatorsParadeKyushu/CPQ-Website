@@ -455,7 +455,7 @@ export default function Home() {
           }}
         >
           <span style={{ color: "#0fb" }}>◆　</span>
-          協賛をお考えの企業様やその他の方々は以下のメールより要件をお伝えください
+          その他の問い合わせは以下のメールより要件をお伝えください
         </div>
         <div
           className={`${ibmPlexSansJp}`}
@@ -466,7 +466,7 @@ export default function Home() {
             lineHeight: 1.4
           }}
         >
-          <Link href="">CONTACT</Link>
+          <Link href="mailto:creators.parade.kyushu@gmail.com">CONTACT</Link>
         </div>
       </Panel>
       <Footer />

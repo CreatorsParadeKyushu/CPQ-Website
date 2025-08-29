@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Creator's Parade Kyushu",
+  title: "Creators Parade Kyushu",
   description: "",
 };
 
