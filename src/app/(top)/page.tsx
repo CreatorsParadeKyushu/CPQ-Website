@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import FloatIn from "../components/ScrollReveal/FloatIn";
 import { Panel } from "./_components/Panel";
 import { RightBar } from "./_components/RightBar";
+import { ImageSwiper } from "./_components/ImageSwiper";
 import { Genres } from "./_components/exhibition/Genres";
 import { GenreHeading } from "./_components/exhibition/GenreHeading";
 import { Genre, GenresArray } from "@/types/Genres";
@@ -53,7 +54,7 @@ export default function Home() {
   const [isHoveredGenre, setIsHoverGenre] = useState<Genre | null>(null);
 
   const toggleVisibility = () => {
-    if (window.scrollY >= window.innerHeight * 3 / 4)
+    if (window.scrollY >= window.innerHeight * 7 / 4)
       setIsVisible(true)
     else
       setIsVisible(false);
@@ -107,6 +108,9 @@ export default function Home() {
             <div className={`${topStyles.titleText} ${monaSans.className}`}>KYUSHU</div>
           </div>
         </div>
+      </div>
+      <div id="cm" className={topStyles.backPanel} style={{ height: "50vh" }}>
+        <ImageSwiper />
       </div>
       <Panel
         id="about"
