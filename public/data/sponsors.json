@@ -1,23 +1,6 @@
 {
   "sponsors": [
-    {
-      "name": "Epic Games Japan合同会社",
-      "logoSrc": "/image/EpicGamesJapan.png",
-      "url": "https://www.epicgames.com/site/ja/home",
-      "rank": "platinum"
-    },
-    {
-      "name": "nu source",
-      "logoSrc": "/image/NuSource.png",
-      "url": "https://nusource.nulab.com/ja/",
-      "rank": ""
-    },
-    {
-      "name": "株式会社トライコア",
-      "logoSrc": "/image/Tricore.png",
-      "url": "https://www.tri-core.co.jp/",
-      "rank": ""
-    }
+    
   ],
   "cosponsors": [
     {

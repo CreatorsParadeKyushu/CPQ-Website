@@ -15,20 +15,6 @@
       "belong": "九州大学"
     },
     {
-      "name": "impression!",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/impre_official"
-        },
-        {
-          "type": "insta",
-          "href": "https://www.instagram.com/impre_ssion.q/#"
-        }
-      ],
-      "belong": "九州大学"
-    },
-    {
       "name": "ふゲだく！",
       "links": [
         {
@@ -51,82 +37,6 @@
         }
       ],
       "belong": "九州工業大学"
-    },
-    {
-      "name": "作るっちゃん",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/tukuruttyan"
-        }
-      ],
-      "belong": ""
-    },
-    {
-      "name": "じょぎ",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/jyogi_pr"
-        },
-        {
-          "type": "hp",
-          "href": "https://jyogi.net/"
-        }
-      ],
-      "belong": "福岡工業大学"
-    },
-    {
-      "name": "福大ピアプロ",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/fuprogram"
-        }
-      ],
-      "belong": "福岡大学"
-    },
-    {
-      "name": "ゲーム作ろうラボ",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/ksu_gamelab"
-        },
-        {
-          "type": "hp",
-          "href": "https://ksugamelab.com/"
-        }
-      ],
-      "belong": "九州産業大学"
-    },
-    {
-      "name": "デジタルアート部",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/ksu_digitalart"
-        },
-        {
-          "type": "insta",
-          "href": "https://www.instagram.com/ksu_digitalart1192/?hl=ja"
-        }
-      ],
-      "belong": "九州産業大学"
-    },
-    {
-      "name": "馬出美術部",
-      "links": [
-        {
-          "type": "x",
-          "href": "https://x.com/maidashi_art"
-        },
-        {
-          "type": "insta",
-          "href": "https://www.instagram.com/maidashi_art/#"
-        }
-      ],
-      "belong": "九州大学"
     }
   ]
 }
