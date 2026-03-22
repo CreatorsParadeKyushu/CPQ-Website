@@ -326,7 +326,7 @@ export default function Home() {
               <span style={{ fontSize: 10, color: "#ffaf00", verticalAlign: "middle" }}>　◆</span>
             </div>
             <Link
-              href=""
+              href="https://forms.gle/tr5Bp8XMz2vH2SYVA"
               className={`${joinStyles.googleForm} ${ibmPlexSansJp.className}`}
             >
               Google Form
