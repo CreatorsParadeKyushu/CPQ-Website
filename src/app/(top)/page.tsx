@@ -338,7 +338,7 @@ export default function Home() {
               margin: "15px 0"
             }}>
               <p>上記Googleフォームに回答してください</p>
-              <p><span style={{ color: "red" }}>募集は既に締め切っています。</span></p>
+              {/* <p><span style={{ color: "red" }}>募集は既に締め切っています。</span></p> */}
             </div>
             <div style={{
               textAlign: "center",
