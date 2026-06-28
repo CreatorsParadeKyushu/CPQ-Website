@@ -1,6 +1,11 @@
 {
   "sponsors": [
-    
+    {
+      "name": "Huionトレンドテクノロジー株式会社",
+      "logoSrc": "/image/Huion.png",
+      "url": "https://www.huion.com/jp/",
+      "rank": ""
+    }
   ],
   "cosponsors": [
     {
