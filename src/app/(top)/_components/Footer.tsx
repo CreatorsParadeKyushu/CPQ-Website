@@ -37,7 +37,7 @@ function Footer() {
         <div className={styles.linksSection}>
           <div className={styles.externalLinks}>
             <div className={styles.linkContainer}>
-              <Link href="https://x.com/Creators_Parede">
+              <Link href="https://x.com/CreatorsParadeQ">
                 X (Twitter)
               </Link>
             </div>
