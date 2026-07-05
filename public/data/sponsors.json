@@ -1,15 +1,21 @@
 {
   "sponsors": [
     {
+      "name": "株式会社ガンバリオン",
+      "logoSrc": "/image/Ganbarion.png",
+      "url": "https://www.ganbarion.co.jp/",
+      "rank": ""
+    },
+    {
       "name": "Huionトレンドテクノロジー株式会社",
       "logoSrc": "/image/Huion.png",
       "url": "https://www.huion.com/jp/",
       "rank": ""
     },
     {
-      "name": "株式会社ガンバリオン",
-      "logoSrc": "/image/Ganbarion.png",
-      "url": "https://www.ganbarion.co.jp/",
+      "name": "一般社団法人TSUNAGU",
+      "logoSrc": "/image/PreparedSponsor.png",
+      "url": "https://tsunagu-sep.org/",
       "rank": ""
     }
   ],
