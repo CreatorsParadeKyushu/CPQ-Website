@@ -15,6 +15,20 @@
       "belong": "九州大学"
     },
     {
+      "name": "impression!",
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/impre_official"
+        },
+        {
+          "type": "insta",
+          "href": "https://www.instagram.com/impre_ssion.q/#"
+        }
+      ],
+      "belong": "九州大学"
+    },
+    {
       "name": "ふゲだく！",
       "links": [
         {
@@ -37,6 +51,79 @@
         }
       ],
       "belong": "九州工業大学"
+    },
+    {
+      "name": "KyutXR",
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/KyutXR"
+        },
+        {
+          "type": "hp",
+          "href": "https://compositecomputer.club"
+        }
+      ],
+      "belong": "九州工業大学"
+    },
+    {
+      "name": "じょぎ",
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/jyogi_pr"
+        },
+        {
+          "type": "hp",
+          "href": "https://jyogi.net/"
+        }
+      ],
+      "belong": "福岡工業大学"
+    },
+    {
+      "name": "dot cube",
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/m_dotcube"
+        }
+      ],
+      "belong": "宮崎大学"
+    },
+    {
+      "name": "Step by code",
+      "links": [
+        {
+          "type": "connpass",
+          "href": "https://step-by-code.connpass.com/"
+        }
+      ],
+      "belong": " "
+      
+    },
+    {
+      "name": "ゲーム作ろうラボ",
+      "links": [
+        {
+          "type": "x",
+          "href": "https://x.com/ksu_gamelab"
+        },
+        {
+          "type": "hp",
+          "href": "https://ksugamelab.com/"
+        }
+      ],
+      "belong": "九州産業大学"
+    },
+    {
+      "name": "Creators Labo",
+      "links": [
+        {
+          "type": "insta",
+          "href": "https://www.instagram.com/nit_creators_labo/#"
+        }
+      ],
+      "belong": " 西日本工業大学"
     }
   ]
 }
